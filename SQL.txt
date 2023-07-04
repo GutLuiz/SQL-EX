@@ -62,3 +62,30 @@ ORDER BY ListPrice DESC
 ELECT top 4 ProductNumber, Name
 FROM Production.Product
 ORDER BY ProductID asc
+
+
+
+**** QUANTOS PRODUTOS TEMOS CADASTRADOS NO SISTEMA QUE CUSTAM MAIS QUE 1500 DOLARES***
+
+SELECT COUNT (listprice)
+FROM Production.Product
+WHERE ListPrice > 1500
+
+
+
+**** QUANTAS PESSOAS TEMOS COM O SOBRENOME QUE INICIA COM A LETRA P?***
+
+
+SELECT COUNT (lastname)
+FROM Person.Person
+WHERE LastName like 'p%'
+
+
+**** EM QUANTAS CIDADES UNICAS ESTAO CADASTRADOS NOSSOS CLIENTES?***
+
+SELECT count (distinct (city)
+FROM Person.Address
+
+
+
+
